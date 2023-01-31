@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!-- 
+mapper의 네임스페이스: DAO에서 mapper를 쓸 때 필요. 
+
+selectListBoard SQL을 사용하려면
+네임스페이스.SQL문아이디 형식으로 사용해야 함.
+
+예) com.study.home.mapper_board.selectListBoard
+      ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ     ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+   			네임스페이스			   SQL문 아이디							     
+-->
+
+
+<mapper namespace="com.study.home.mapper_board">
+ 
+ 	<!-- 게시판 리스트 조회 -->
+    <select id="selectListBoard" resultType="com.study.home.board.entity.BoardDto">
+        SELECT	/* com.study.home.mapper_board.selectListBoard 게시판 리스트 조회 */
+        		ID,
+        		CONTENT
+        FROM
+        		BOARD
+    </select>
+ 
+</mapper>
