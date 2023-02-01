@@ -30,7 +30,7 @@ selectListBoard SQL을 사용하려면
     
     
     <!-- 게시글 생성 -->
-    <select id="insertBoard" parameterType="com.study.home.board.entity.BoardDto">
+    <insert id="insertBoard" parameterType="com.study.home.board.entity.BoardDto">
         INSERT INTO	/* com.study.home.mapper_board.insertBoard 게시글 생성 */
         		BOARD
         		
@@ -45,6 +45,6 @@ selectListBoard SQL을 사용하려면
 	        	#{CONTENT}	
         	)
         
-    </select>
+    </insert>
  
 </mapper>
