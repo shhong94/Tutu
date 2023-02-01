@@ -14,5 +14,7 @@
 	<p>${board.content}</p>
 </c:forEach>
 
+<button id="btn_insert_board" onclick="location.href='/insertBoardPage'">게시글 작성</button>
+
 </body>
 </html>

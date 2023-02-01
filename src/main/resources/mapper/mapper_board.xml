@@ -26,5 +26,25 @@ selectListBoard SQL을 사용하려면
         FROM
         		BOARD
     </select>
+    
+    
+    
+    <!-- 게시글 생성 -->
+    <select id="insertBoard" parameterType="com.study.home.board.entity.BoardDto">
+        INSERT INTO	/* com.study.home.mapper_board.insertBoard 게시글 생성 */
+        		BOARD
+        		
+        	(
+        		ID, 
+        		CONTENT
+        	)
+        	
+        VALUES
+        	(
+	        	#{ID},
+	        	#{CONTENT}	
+        	)
+        
+    </select>
  
 </mapper>

@@ -43,5 +43,18 @@ public class BoardDao {
 	}
 	
 	
+	
+	// 게시글 생성 메소드
+	public void insertBoard(BoardDto dto) throws Exception {
+		
+		SqlSession sqlSession = sqlSessionFactory.openSession();				// sqlSessionFactory를 사용하여 SqlSession 인스턴스 생성
+		
+		sqlSession.insert(namespace + "." + "insertBoard", dto);				// SqlSession을 사용하여 insertBoard SQL문 실행 (파라미터로 BoardDto 보냄)
+		
+		// INSERT문은 별도의 리턴값 없음.
+		
+	}
+	
+	
 
 }

@@ -27,4 +27,24 @@ public class BoardController {
 		
 		return "/board/boardList";								// /board/boardList.jsp로 이동
 	}
+	
+	
+	
+	// 게시글 생성하는 화면으로 이동하는 메소드
+	@RequestMapping("/insertBoardPage")
+	public String insertBoardPage() throws Exception {
+		
+		return "/board/insertBoardPage";
+	}
+	
+	
+	
+	// 게시글 생성을 수행하는 메소드
+	@RequestMapping("/insertBoard")
+	public String insertBoard(BoardDto dto) throws Exception {
+		
+		dao.insertBoard(dto);				// dao를 사용하여 게시글 생성. (BoardDto를 파라미터로 보냄)
+		
+		return "/board/insertBoardPage";
+	}
 }
